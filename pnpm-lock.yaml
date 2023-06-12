@@ -4,6 +4,9 @@ dependencies:
   astro:
     specifier: ^2.5.6
     version: 2.5.6
+  fullpage.js:
+    specifier: ^4.0.20
+    version: 4.0.20
 
 packages:
 
@@ -1334,6 +1337,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /fullpage.js@4.0.20:
+    resolution: {integrity: sha512-y72V3oV/pFccPYaxnUosEltQP9tXH340x479oQSS9Yab0L0YpIPNE0PFA68l6XEq5Lhw7IRqyCgVwL+WdjtQdA==}
+    dev: false
 
   /function-bind@1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}

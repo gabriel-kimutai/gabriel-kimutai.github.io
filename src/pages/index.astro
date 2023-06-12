@@ -1,81 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<MainLayout title="Home">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<div class="fullpage">
+			<div id="about-me" class="section">
+				<div class="wrapper">
+					<article id="description">
+						<h1>Hi, I'm Gabriel</h1>
+						<p>
+							A freelance <span class="emph">Web Developer</span> and <span class="emph">Android Enthusiast</span> in
+							college, balancing learning and client work. My passion,
+							creativity, and dedication set me apart in the ever-evolving
+							world of web development.
+						</p>
+					</article>
+				</div>
+			</div>
+			<div id="projects" class="section">
+				<div class="wrapper">
+					<h1>Projects</h1>
+				</div>
+			</div>
+			<div id="contact" class="section">
+				<div class="wrapper">
+					<h1>Contact</h1>
+				</div>
+			</div>
+		</div>
 	</main>
-</Layout>
+</MainLayout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap");
+
+	.section {
+		width: 100vw;
+		height: 100vh;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	.wrapper {
+		margin: 0 3rem;
+		max-width: 40%;
+		word-wrap: break-word;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	#about-me {
+		display: flex;
+		align-items: center;
+		align-content: center;
+		font-family: Montserrat;
+		color: #fecea8;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	#about-me > .wrapper > h1 {
+		color: #e84a5f;
+		font-weight: 900;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+	#about-me > .wrapper > p {
+		font-weight: 400;
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.emph {
+		font-weight: 700;
+		font-style: italic;
+		color: #fff685;
 	}
 </style>
