@@ -2,37 +2,35 @@
 ---
 
 <nav>
-    <ul>
-        <li>
-            <a href="#about-me">home</a>
-        </li>
-        <li>
-            <a href="#projects">projects</a>
-        </li>
-        <li>
-            <a href="#contact">contact</a>
-        </li>
-    </ul>
+    <div class="link-container">
+        <div class="link">
+            <a href="/">home</a>
+        </div>
+        <div class="link">
+            <a href="/projects">projects</a>
+        </div>
+        <div class="link">
+            <a href="/contact">contact</a>
+        </div>
+    </div>
 </nav>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Urbanist&display=swap');
     nav {
-        padding: 0px;
-        position: fixed;
-        top: 0px;
-        left: 0px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
     }
-    ul {
+    .link-container {
         display: flex;
     }
-
-    li {
-        list-style: none;
-        margin: 0 0.2em;
+    .link-container > div {
+        margin: 0.5rem 0.5rem;
     }
-
-    li > a {
+    .link-container > div > a {
         text-decoration: none;
-        color: #99b898;
+		color: #2a9d8f;
+        font-family: Urbanist;
     }
 </style>

@@ -4,65 +4,72 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Home">
 	<main>
-		<div class="fullpage">
-			<div id="about-me" class="section">
-				<div class="wrapper">
-					<article id="description">
-						<h1>Hi, I'm Gabriel</h1>
-						<p>
-							A freelance <span class="emph">Web Developer</span> and <span class="emph">Android Enthusiast</span> in
-							college, balancing learning and client work. My passion,
-							creativity, and dedication set me apart in the ever-evolving
-							world of web development.
-						</p>
-					</article>
-				</div>
+		<div class="container">
+			<div class="about-me">
+				<h1>Hi there, I'm <span id="name">Gabriel</span></h1>
+				<!-- <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Perspiciatis facilis vero ratione nostrum quasi, quae
+					voluptate repellat in maiores at quos, tempora veritatis id
+					labore! Blanditiis et nihil illo animi?
+				</p> -->
+				<p class="decription">
+					A passionate <span class="emph">Web developer</span> and <span
+						class="emph">Android Enthusiast</span
+					>.
+					I build and deploy efficient websites and web apps using modern
+					front-end technologies 
+					using <span class="emph-t">HTML</span>, <span class="emph-t"
+						>CSS</span
+					> and <span class="emph-t">Javascript</span>
+				</p>
 			</div>
-			<div id="projects" class="section">
-				<div class="wrapper">
-					<h1>Projects</h1>
-				</div>
-			</div>
-			<div id="contact" class="section">
-				<div class="wrapper">
-					<h1>Contact</h1>
-				</div>
+			<div class="illustration">
+				<img src="developer.svg" alt="developer" />
 			</div>
 		</div>
 	</main>
 </MainLayout>
 
 <style>
-	@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Source+Code+Pro&family=Urbanist&display=swap");
 
-	.section {
-		width: 100vw;
-		height: 100vh;
-	}
-	.wrapper {
-		margin: 0 3rem;
-		max-width: 40%;
-		word-wrap: break-word;
-	}
-
-	#about-me {
-		display: flex;
-		align-items: center;
+	main {
+		display: grid;
+		justify-content: center;
 		align-content: center;
-		font-family: Montserrat;
-		color: #fecea8;
 	}
 
-	#about-me > .wrapper > h1 {
-		color: #e84a5f;
-		font-weight: 900;
+	p {
+		font-size: x-large;
 	}
-	#about-me > .wrapper > p {
-		font-weight: 400;
-	}
+
 	.emph {
-		font-weight: 700;
+		font-weight: bolder;
 		font-style: italic;
-		color: #fff685;
+		color: #a2d2ff;
+	}
+
+	.emph-t {
+		color: #ffc8dd;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 5rem;
+	}
+
+	.about-me {
+		width: 40%;
+		word-wrap: break-word;
+		margin-right: 2rem;
+	}
+	#name {
+		color: #2a9d8f;
+	}
+	.illustration {
+		width: 60%;
 	}
 </style>
