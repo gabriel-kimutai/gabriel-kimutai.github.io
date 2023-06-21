@@ -2,35 +2,60 @@
 ---
 
 <nav>
-    <div class="link-container">
-        <div class="link">
-            <a href="/">home</a>
-        </div>
-        <div class="link">
-            <a href="/projects">projects</a>
-        </div>
-        <div class="link">
-            <a href="/contact">contact</a>
+    <div class="nav-container">
+        <div class="link-container">
+            <div class="link">
+                <a href="#about-me">
+                    <img src="icons/user-6-fill.svg" alt="user-icon" />
+                </a>
+            </div>
+            <div class="link">
+                <a href="#skills">
+                    <img src="icons/code-box-fill.svg" alt="code-icon" />
+                </a>
+            </div>
+            <div class="link">
+                <a href="#projects">
+                    <img src="icons/terminal-window-fill.svg" alt="code-icon" />
+                </a>
+            </div>
+            <div class="link">
+                <a href="#contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        ><path
+                            d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"
+                            fill="rgba(162,82,82,1)"></path></svg
+                    >
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Urbanist&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Urbanist&display=swap");
     nav {
-        display: grid;
-        justify-content: center;
-        align-content: center;
+        top: 40%;
+        position: fixed;
+        border: solid black 2px;
+        border-radius: 0.6rem;
+        margin: 0 0.5rem;
     }
-    .link-container {
-        display: flex;
+
+    img {
+        width: 2rem;
+        height: 2rem;
     }
+
     .link-container > div {
         margin: 0.5rem 0.5rem;
     }
     .link-container > div > a {
         text-decoration: none;
-		color: #2a9d8f;
+        color: #2a9d8f;
         font-family: Urbanist;
+    }
+    svg:hover {
+        fill: red;
     }
 </style>
