@@ -3,31 +3,36 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Home">
-	<main>
-		<div class="container">
-			<div class="about-me">
-				<h1>Hi there, I'm <span id="name">Gabriel</span></h1>
-				<!-- <p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Perspiciatis facilis vero ratione nostrum quasi, quae
-					voluptate repellat in maiores at quos, tempora veritatis id
-					labore! Blanditiis et nihil illo animi?
-				</p> -->
-				<p class="decription">
-					A passionate <span class="emph">Web developer</span> and <span
-						class="emph">Android Enthusiast</span
-					>.
-					I build and deploy efficient websites and web apps using modern
-					front-end technologies 
-					using <span class="emph-t">HTML</span>, <span class="emph-t"
-						>CSS</span
-					> and <span class="emph-t">Javascript</span>
-				</p>
+	<main id="fullpage">
+		<section id="about-me" class="section">
+			<div class="container">
+				<div class="about-me">
+					<h1>Hi there, I'm <span id="name">Gabriel</span></h1>
+					<p class="decription">
+						A passionate <span class="emph">Web developer</span> and
+						<span class="emph">Android Enthusiast</span>. I build
+						and deploy efficient websites and web apps using modern
+						front-end technologies using <span class="emph-t"
+							>HTML</span
+						>, <span class="emph-t">CSS</span> and <span
+							class="emph-t">Javascript</span
+						>
+					</p>
+				</div>
+				<div class="illustration">
+					<img src="developer.svg" alt="developer" />
+				</div>
 			</div>
-			<div class="illustration">
-				<img src="developer.svg" alt="developer" />
-			</div>
-		</div>
+		</section>
+		<section id="skills" class="section">
+			<h1>skills</h1>
+		</section>
+		<section id="projects" class="section">
+			<h1>projects</h1>
+		</section>
+		<section id="contact" class="section">
+			<h1>contact</h1>
+		</section>
 	</main>
 </MainLayout>
 
@@ -38,6 +43,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 		display: grid;
 		justify-content: center;
 		align-content: center;
+		margin: 0 5rem;
+		padding: 2rem 0;
+	}
+
+	section {
+		width: 100%;
+		height: 100vh;
 	}
 
 	p {
@@ -58,18 +70,45 @@ import MainLayout from "../layouts/MainLayout.astro";
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 5rem;
+		padding: 1rem 0;
 	}
 
 	.about-me {
+		position: relative;
 		width: 40%;
 		word-wrap: break-word;
 		margin-right: 2rem;
+		left: -650px;
 	}
 	#name {
 		color: #2a9d8f;
 	}
 	.illustration {
 		width: 60%;
+		position: relative;
+		right: -950px;
 	}
 </style>
+<script>
+	import anime from "animejs";
+	import fullpage from "fullpage.js";
+
+	fullpage("#fullpage", {
+		autoScrolling: false,
+	});
+// easing: 'spring(mass, stiffness, damping, velocity)'
+	window.onload = () => {
+		anime({
+			easing: "spring(1, 40, 60, 3)",
+			delay: 200,
+			targets: ".about-me",
+			translateX: 650,
+		});
+		anime({
+			delay: 500,
+			easing: "spring(1, 40, 70, 2)",
+			targets: ".illustration",
+			translateX: -950,
+		});
+	};
+</script>

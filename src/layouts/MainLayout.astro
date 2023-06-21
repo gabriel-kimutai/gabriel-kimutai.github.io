@@ -14,16 +14,13 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<Navigation />
-		<main class="main">
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
 
@@ -39,10 +36,7 @@ const { title } = Astro.props;
 		background-color: #264653;
 		color: white;
 		width: 100vw;
-		height: 100vh;
+		/* height: 100vh; */
 		font-family: Urbanist;
-	}
-	.main {
-		margin: 0 10rem;
 	}
 </style>
